@@ -13,7 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		User user1 = new User(1,"Ahmet","Özpolat","ahmetoz@gmail.com","sifrembu1212");
+		User user1 = new User(1,"Ahmet","Özpolat","ahmetoz@mail.com","sifrembu1212");
 		
 		LoginService loginService = new GoogleLoginManagerAdapter();
 		UserService manager = new UserManager(loginService, new HibernateUserDao());
@@ -21,6 +21,8 @@ public class Main {
 		
 		UserService service = new UserManager(new MailVertificationService(), new MailValidationManager(), new HibernateUserDao());
 		service.signIn(user1);
+		
+		service.signUp(user1);
 	}
 
 }

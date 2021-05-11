@@ -1,6 +1,8 @@
 package eCommerceDemo.business.abstracts;
 
+import eCommerceDemo.entities.concretes.User;
+
 public interface ValidationService {
-	boolean validate(String mail);
+	boolean validate(User user);
 	
 }

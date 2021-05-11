@@ -45,10 +45,10 @@ public class UserManager implements UserService{
 		if (user.getPassword().length()>=6 && 
 				user.getFirstName().length()>=2 && 
 				user.getLastName().length()>=2 && 
-				this.validation.validate(user.getMail())==true) 
+				this.validation.validate(user)==true )
 		{
 			if (vertification.isClicked()==true) {
-				this.dao.signIn(user);
+				this.dao.signUp(user);
 			}}
 		else {
 			System.out.println("Hatalý bilgi girdiniz.");
